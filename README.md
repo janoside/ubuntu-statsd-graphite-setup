@@ -33,24 +33,30 @@ easy_install twisted
 easy_install txamqp
 easy_install django-tagging
 
-cd /home/ubuntu/whisper
-python setup.py install
+pushd whisper
+ python setup.py install
+popd
 
-cd /home/ubuntu/carbon
-python setup.py install
+pushd carbon
+ python setup.py install
+popd
 
-cd /opt/graphite/conf
-cp carbon.conf.example carbon.conf
-cp storage-schemas.conf.example storage-schemas.conf
+pushd graphite/conf
+ cp carbon.conf.example carbon.conf
+ cp storage-schemas.conf.example storage-schemas.conf
+popd
 
-cd /home/ubuntu/graphite
-python check-dependencies.py
-python setup.py install
+pushd graphite
+ python check-dependencies.py
+ python setup.py install
 
-cd /home/ubuntu/graphite/examples
-cp example-graphite-vhost.conf /etc/apache2/sites-available/default
-cp /opt/graphite/conf/graphite.wsgi.example /opt/graphite/conf/graphite.wsgi
-vim /etc/apache2/sites-available/default
+ pushd examples
+  cp example-graphite-vhost.conf /etc/apache2/sites-available/default
+  cp /opt/graphite/conf/graphite.wsgi.example /opt/graphite/conf/graphite.wsgi
+  vim /etc/apache2/sites-available/default
+ popd
+popd
+
 ```
 
 ```
