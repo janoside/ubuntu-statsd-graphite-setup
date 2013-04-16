@@ -31,6 +31,7 @@ apt-get install build-essential python-dev
 easy_install zope.interface
 easy_install twisted
 easy_install txamqp
+easy_install django
 easy_install django-tagging
 
 pushd whisper
@@ -41,7 +42,7 @@ pushd carbon
  python setup.py install
 popd
 
-pushd graphite/conf
+pushd carbon/conf
  cp carbon.conf.example carbon.conf
  cp storage-schemas.conf.example storage-schemas.conf
 popd
