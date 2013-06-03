@@ -27,7 +27,7 @@ rm carbon-0.9.10.tar.gz
 rm graphite-web-0.9.10.tar.gz
 rm whisper-0.9.10.tar.gz
 apt-get install --assume-yes apache2 apache2-mpm-worker apache2-utils apache2.2-bin apache2.2-common libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libapache2-mod-wsgi libaprutil1-ldap memcached python-cairo python-cairo-dev python-django python-ldap python-memcache python-pysqlite2 sqlite3 erlang-os-mon erlang-snmp rabbitmq-server bzr expect ssh libapache2-mod-python python-setuptools
-apt-get install build-essential python-dev
+apt-get install build-essential python-dev vim
 easy_install zope.interface
 easy_install twisted
 easy_install txamqp
@@ -129,7 +129,7 @@ WSGISocketPrefix /etc/httpd/wsgi/
 sudo apt-get install python-software-properties
 sudo apt-add-repository ppa:chris-lea/node.js
 sudo apt-get update
-sudo apt-get install nodejs npm
+sudo apt-get install nodejs
 sudo apt-get install git
 
 cd /opt && sudo git clone git://github.com/etsy/statsd.git
